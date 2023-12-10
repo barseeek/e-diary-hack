@@ -50,7 +50,7 @@ remove_chastisements(pupil)
 Пример кода для исправления оценок ученика "Иванов Иван":
 ```python
 from datacenter.models import Schoolkid
-from remove_chastisements_script import remove_chastisements
+from functions import remove_chastisements
 
 pupil_ivan = Schoolkid.objects.get(full_name__contains="Иванов Иван")
 remove_chastisements(pupil_ivan)
@@ -61,7 +61,7 @@ remove_chastisements(pupil_ivan)
 ```python
 from datacenter.models import Schoolkid
 from datacenter.models import Commendation
-from create_commendation_script import create_commendation
+from functions import create_commendation
 ```
 - Получите объект модели ученика, для которого нужно добавить похвалу:
 ```python
@@ -77,7 +77,7 @@ create_commendation("Фамилия Имя", "Название_предмета"
 Пример кода для создания похвалы у ученика "Иванов Иван" по предмету "Математика":
 ```python
 from datacenter.models import Schoolkid
-from create_commendation_script import create_commendation
+from functions import create_commendation
 
 pupil_ivan = Schoolkid.objects.get(full_name__contains="Иванов Иван")
 create_commendation(pupil_ivan.full_name, "Математика")
