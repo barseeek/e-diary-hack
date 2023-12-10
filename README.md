@@ -25,7 +25,7 @@ fix_marks(pupil)
 Пример кода для исправления оценок ученика "Иванов Иван":
 ```python
 from datacenter.models import Schoolkid
-from fix_marks_script import fix_marks
+from functions import fix_marks
 
 pupil_ivan = Schoolkid.objects.get(full_name__contains="Иванов Иван")
 fix_marks(pupil_ivan)
@@ -36,7 +36,7 @@ fix_marks(pupil_ivan)
 ```python
 from datacenter.models import Schoolkid
 from datacenter.models import Chastisement
-from remove_chastisements_script import remove_chastisements
+from functions import remove_chastisements
 ```
 - Получите объект модели ученика, у которого нужно удалить замечания:
 ```python
